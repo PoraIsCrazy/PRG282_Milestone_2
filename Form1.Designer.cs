@@ -38,7 +38,7 @@ namespace PRG282_Milestone_2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "knoppie";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
