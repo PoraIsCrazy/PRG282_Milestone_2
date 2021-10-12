@@ -32,7 +32,6 @@ namespace PRG282_Milestone_2
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxPassword2 = new System.Windows.Forms.TextBox();
             this.tbxPassword1 = new System.Windows.Forms.TextBox();
             this.tbxUsername = new System.Windows.Forms.TextBox();
@@ -43,9 +42,11 @@ namespace PRG282_Milestone_2
             this.btnRegister = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxShow = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,19 +82,9 @@ namespace PRG282_Milestone_2
             this.label1.TabIndex = 4;
             this.label1.Text = "Please enter";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PRG282_Milestone_2.Properties.Resources.FormLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // tbxPassword2
             // 
-            this.tbxPassword2.Location = new System.Drawing.Point(122, 95);
+            this.tbxPassword2.Location = new System.Drawing.Point(122, 69);
             this.tbxPassword2.Name = "tbxPassword2";
             this.tbxPassword2.Size = new System.Drawing.Size(187, 20);
             this.tbxPassword2.TabIndex = 2;
@@ -102,7 +93,7 @@ namespace PRG282_Milestone_2
             // 
             // tbxPassword1
             // 
-            this.tbxPassword1.Location = new System.Drawing.Point(122, 69);
+            this.tbxPassword1.Location = new System.Drawing.Point(122, 43);
             this.tbxPassword1.Name = "tbxPassword1";
             this.tbxPassword1.Size = new System.Drawing.Size(187, 20);
             this.tbxPassword1.TabIndex = 1;
@@ -119,6 +110,7 @@ namespace PRG282_Milestone_2
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbxShow);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnRegister);
             this.panel2.Controls.Add(this.label5);
@@ -146,7 +138,7 @@ namespace PRG282_Milestone_2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 71);
+            this.label4.Location = new System.Drawing.Point(3, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 4;
@@ -156,7 +148,7 @@ namespace PRG282_Milestone_2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 97);
+            this.label5.Location = new System.Drawing.Point(3, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 15);
             this.label5.TabIndex = 5;
@@ -170,6 +162,7 @@ namespace PRG282_Milestone_2
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // button2
             // 
@@ -179,6 +172,7 @@ namespace PRG282_Milestone_2
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnExit
             // 
@@ -189,6 +183,28 @@ namespace PRG282_Milestone_2
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRG282_Milestone_2.Properties.Resources.FormLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbxShow
+            // 
+            this.cbxShow.AutoSize = true;
+            this.cbxShow.Location = new System.Drawing.Point(122, 95);
+            this.cbxShow.Name = "cbxShow";
+            this.cbxShow.Size = new System.Drawing.Size(108, 17);
+            this.cbxShow.TabIndex = 8;
+            this.cbxShow.Text = "Show Password?";
+            this.cbxShow.UseVisualStyleBackColor = true;
+            this.cbxShow.CheckedChanged += new System.EventHandler(this.cbxShow_CheckedChanged);
             // 
             // Registration_Form
             // 
@@ -200,9 +216,9 @@ namespace PRG282_Milestone_2
             this.Text = "Registration_Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +239,6 @@ namespace PRG282_Milestone_2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.CheckBox cbxShow;
     }
 }

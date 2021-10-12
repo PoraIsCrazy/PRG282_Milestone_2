@@ -146,6 +146,7 @@ namespace PRG282_Milestone_2
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnInsert);
@@ -172,35 +173,35 @@ namespace PRG282_Milestone_2
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(149, 10);
+            this.tbxName.Location = new System.Drawing.Point(145, 11);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(160, 20);
             this.tbxName.TabIndex = 0;
             // 
             // tbxSurname
             // 
-            this.tbxSurname.Location = new System.Drawing.Point(149, 36);
+            this.tbxSurname.Location = new System.Drawing.Point(145, 37);
             this.tbxSurname.Name = "tbxSurname";
             this.tbxSurname.Size = new System.Drawing.Size(160, 20);
             this.tbxSurname.TabIndex = 1;
             // 
             // tbxStudentNum
             // 
-            this.tbxStudentNum.Location = new System.Drawing.Point(189, 114);
+            this.tbxStudentNum.Location = new System.Drawing.Point(185, 115);
             this.tbxStudentNum.Name = "tbxStudentNum";
             this.tbxStudentNum.Size = new System.Drawing.Size(120, 20);
             this.tbxStudentNum.TabIndex = 2;
             // 
             // tbxDoB
             // 
-            this.tbxDoB.Location = new System.Drawing.Point(149, 88);
+            this.tbxDoB.Location = new System.Drawing.Point(145, 89);
             this.tbxDoB.Name = "tbxDoB";
             this.tbxDoB.Size = new System.Drawing.Size(160, 20);
             this.tbxDoB.TabIndex = 3;
             // 
             // tbxPhoneNum
             // 
-            this.tbxPhoneNum.Location = new System.Drawing.Point(189, 140);
+            this.tbxPhoneNum.Location = new System.Drawing.Point(185, 141);
             this.tbxPhoneNum.Name = "tbxPhoneNum";
             this.tbxPhoneNum.Size = new System.Drawing.Size(120, 20);
             this.tbxPhoneNum.TabIndex = 4;
@@ -238,7 +239,7 @@ namespace PRG282_Milestone_2
             // cbxGender
             // 
             this.cbxGender.FormattingEnabled = true;
-            this.cbxGender.Location = new System.Drawing.Point(149, 61);
+            this.cbxGender.Location = new System.Drawing.Point(145, 62);
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(160, 21);
             this.cbxGender.TabIndex = 8;
@@ -246,7 +247,7 @@ namespace PRG282_Milestone_2
             // cbxModule
             // 
             this.cbxModule.FormattingEnabled = true;
-            this.cbxModule.Location = new System.Drawing.Point(189, 166);
+            this.cbxModule.Location = new System.Drawing.Point(185, 167);
             this.cbxModule.Name = "cbxModule";
             this.cbxModule.Size = new System.Drawing.Size(120, 21);
             this.cbxModule.TabIndex = 9;
@@ -293,7 +294,7 @@ namespace PRG282_Milestone_2
             // 
             // pbxStudent
             // 
-            this.pbxStudent.Location = new System.Drawing.Point(149, 220);
+            this.pbxStudent.Location = new System.Drawing.Point(145, 221);
             this.pbxStudent.Name = "pbxStudent";
             this.pbxStudent.Size = new System.Drawing.Size(160, 120);
             this.pbxStudent.TabIndex = 14;
@@ -355,6 +356,7 @@ namespace PRG282_Milestone_2
             this.btnExit.TabIndex = 20;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Student_Data
             // 

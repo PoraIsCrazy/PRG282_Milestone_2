@@ -16,5 +16,10 @@ namespace PRG282_Milestone_2
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
