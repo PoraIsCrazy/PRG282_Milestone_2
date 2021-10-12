@@ -16,7 +16,5 @@ namespace PRG282_Milestone_2
         {
             InitializeComponent();
         }
-
-        
     }
 }
