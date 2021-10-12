@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG282_Milestone_2
 {
-    public partial class Form1 : Form
+    public partial class Registration_Form : Form
     {
-        public Form1()
+        public Registration_Form()
         {
             InitializeComponent();
         }
-
-        
     }
 }
