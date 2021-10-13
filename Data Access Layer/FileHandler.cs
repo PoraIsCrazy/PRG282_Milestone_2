@@ -183,8 +183,7 @@ namespace PRG282_Milestone_2.Data_Access_Layer
 
         public void UpdateModule(string moduleCode, string name, string description, string ytLinks)
         {
-            string query = @"UPDATE Module SET moduleCode = ('" + moduleCode + "'), name = ('" + name + "'), " +
-                "description= ('" + description + "'), ytLinks = ('" + ytLinks + "');
+            string query = @"UPDATE Module SET moduleCode = ('" + moduleCode + "'), name = ('" + name + "'), " + "description = ('" + description + "'), ytLinks = ('" + ytLinks + "')";
 
             conn = new SqlConnection(connect);
 
