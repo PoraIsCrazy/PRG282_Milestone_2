@@ -10,11 +10,50 @@ using System.Windows.Forms;
 
 namespace PRG282_Milestone_2
 {
-    public partial class Form1 : Form
+    public partial class LogInForm : Form
     {
-        public Form1()
+        public LogInForm()
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbxName.Text = "Student Name";
+            tbxPassword.Text = "Password";
+            cbxShow.Checked = false;
+            tbxPassword.UseSystemPasswordChar = true;
+        }
+
+        private void cbxShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxShow.Checked == true)
+            {
+                tbxPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tbxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void lklblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registration_Form form2 = new Registration_Form();
+            this.Hide();
+            form2.ShowDialog();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            Student_Data form3 = new Student_Data();
+            this.Hide();
+            form3.ShowDialog();
+        }    
     }
 }
