@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Logic Layer\Logic.cs" />
+    <Compile Include="Business Logic Layer\Module.cs" />
+    <Compile Include="Business Logic Layer\Student.cs" />
+    <Compile Include="Business Logic Layer\User.cs" />
     <Compile Include="Data Access Layer\FileHandler.cs" />
     <Compile Include="Data Access Layer\SQLDBData.cs" />
     <Compile Include="Form1.cs">
